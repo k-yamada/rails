@@ -12,7 +12,9 @@ set :rails_env, 'staging'                  # If the environment differs from the
 set :migration_role, 'migrator'            # Defaults to 'db'
 set :conditionally_migrate, true           # Defaults to false. If true, it's skip migration if files in db/migrate not modified
 set :assets_roles, [:web, :app]            # Defaults to [:web]
-set :assets_prefix, 'prepackaged-assets'   # Defaults to 'assets' this should match config.assets.prefix in your rails config/application.rb
+set :assets_prefix, 'prepackaged-assets'   # Defaults to 'assets' this should match config.assets.prefix in your
+set :rails_root, 'rails_root_dir'          # If rails root dir is in the subdirectory, set rails root dir.
+rails config/application.rb
 ```
 
 If you need to touch `public/images`, `public/javascripts` and `public/stylesheets` on each deploy:
